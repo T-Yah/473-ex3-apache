@@ -160,6 +160,31 @@
         </configuration>
       </plugin>
       <plugin>
+      <!-- ADDED PIT TEST & JUNIT 5 SUPPORT -->
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.15.2</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-junit5-plugin</artifactId>
+            <version>1.2.1</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+        <!-- SPECIFY TARGET CLASSES HERE -->
+          <!-- <targetClasses>
+            <param>org.apache.commons.collections4.ArrayStack</param>
+            <param>org.apache.commons.collections4.bag.BagUtils</param>
+          </targetClasses>
+          <targetTests>
+            <param>org.apache.commons.collections4.ArrayStackTest</param>
+            <param>org.apache.commons.collections4.bag.BagUtilsTest</param>
+          </targetTests> -->
+          <verbose>true</verbose>
+        </configuration>
+      </plugin>
+      <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
           <descriptors>
